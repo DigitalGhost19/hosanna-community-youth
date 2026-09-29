@@ -1,0 +1,4595 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Hosanna Community Youth</title>
+
+<meta
+name="description"
+content="Hosanna Community Youth — We are the hands and feet of God's love."
+>
+
+<style>
+
+/* =========================================================
+   HOSANNA COMMUNITY YOUTH
+   ========================================================= */
+
+:root {
+    --black: #0c0c0c;
+    --black-soft: #151515;
+
+    --white: #fffdf9;
+    --cream: #f7f3eb;
+
+    --gold: #d5a72d;
+    --gold-light: #f0d88b;
+
+    --burgundy: #681f2c;
+    --burgundy-dark: #42131c;
+
+    --sand: #e9decb;
+
+    --text: #151515;
+    --muted: #6b6b6b;
+
+    --border: rgba(0,0,0,.10);
+
+    --radius: 26px;
+
+    --max-width: 1180px;
+
+    --shadow:
+        0 25px 70px rgba(0,0,0,.12);
+}
+
+
+/* =========================================================
+   RESET
+   ========================================================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family:
+        Inter,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+    background: var(--cream);
+
+    color: var(--text);
+
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button,
+input,
+textarea,
+select {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+.container {
+    width: min(
+        calc(100% - 40px),
+        var(--max-width)
+    );
+
+    margin: auto;
+}
+
+
+/* =========================================================
+   NAVIGATION
+   ========================================================= */
+
+header {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    z-index: 1000;
+
+    background:
+        rgba(12,12,12,.92);
+
+    backdrop-filter: blur(18px);
+
+    border-bottom:
+        1px solid
+        rgba(255,255,255,.07);
+}
+
+.nav {
+    height: 78px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+.brand {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    color: white;
+
+    font-weight: 900;
+}
+
+.brand img {
+    width: 60px;
+    height: 60px;
+
+    object-fit: contain;
+
+    background: black;
+
+    border-radius: 7px;
+
+    padding: 2px;
+
+    mix-blend-mode: normal;
+
+    filter: none;
+}
+
+.brand-text {
+    font-size: .85rem;
+
+    line-height: 1.1;
+}
+
+.brand-text small {
+    display: block;
+
+    color: var(--gold-light);
+
+    margin-top: 4px;
+
+    font-size: .63rem;
+
+    text-transform: uppercase;
+
+    letter-spacing: .15em;
+}
+
+.nav-links {
+    display: flex;
+
+    align-items: center;
+
+    gap: 25px;
+}
+
+.nav-links a {
+    color:
+        rgba(255,255,255,.78);
+
+    font-size: .87rem;
+
+    transition: .2s;
+}
+
+.nav-links a:hover {
+    color: var(--gold-light);
+}
+
+.nav-join {
+    background: var(--gold);
+
+    color: var(--black) !important;
+
+    padding: 10px 18px;
+
+    border-radius: 999px;
+
+    font-weight: 900;
+}
+
+.menu-button {
+    display: none;
+
+    border: 0;
+
+    background: none;
+
+    color: white;
+
+    font-size: 1.8rem;
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.hero {
+    min-height: 100vh;
+
+    padding:
+        150px
+        0
+        100px;
+
+    color: white;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background:
+
+        radial-gradient(
+            circle at 85% 18%,
+            rgba(212,167,44,.18),
+            transparent 30%
+        ),
+
+        radial-gradient(
+            circle at 10% 80%,
+            rgba(100,31,42,.52),
+            transparent 34%
+        ),
+
+        linear-gradient(
+            135deg,
+            #0b0b0b,
+            #151515
+        );
+}
+
+.hero::before {
+    content: "";
+
+    position: absolute;
+
+    width: 650px;
+    height: 650px;
+
+    border-radius: 50%;
+
+    border:
+        1px solid
+        rgba(255,255,255,.05);
+
+    right: -300px;
+    top: 80px;
+}
+
+.hero::after {
+    content: "";
+
+    position: absolute;
+
+    width: 320px;
+    height: 320px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(212,167,44,.06);
+
+    filter: blur(55px);
+
+    left: 10%;
+    bottom: -120px;
+}
+
+.hero-grid {
+    position: relative;
+
+    z-index: 2;
+
+    display: grid;
+
+    grid-template-columns:
+        1.12fr
+        .88fr;
+
+    gap: 65px;
+
+    align-items: center;
+}
+
+.eyebrow {
+    color: var(--gold-light);
+
+    font-size: .72rem;
+
+    text-transform: uppercase;
+
+    letter-spacing: .18em;
+
+    font-weight: 900;
+
+    margin-bottom: 18px;
+}
+
+.hero h1 {
+    font-size:
+        clamp(
+            3.3rem,
+            7.5vw,
+            6.8rem
+        );
+
+    line-height: .88;
+
+    letter-spacing: -.075em;
+
+    max-width: 800px;
+
+    margin-bottom: 30px;
+}
+
+.hero h1 span {
+    color: var(--gold);
+}
+
+.hero-description {
+    color:
+        rgba(255,255,255,.72);
+
+    font-size: 1.08rem;
+
+    max-width: 650px;
+
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+}
+
+
+/* =========================================================
+   BUTTONS
+   ========================================================= */
+
+.btn {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    padding:
+        14px 21px;
+
+    border-radius: 999px;
+
+    border: none;
+
+    font-weight: 900;
+
+    transition:
+        transform .2s,
+        box-shadow .2s;
+}
+
+.btn:hover {
+    transform:
+        translateY(-2px);
+}
+
+.btn-primary {
+    background: var(--gold);
+
+    color: var(--black);
+
+    box-shadow:
+        0 15px 35px
+        rgba(212,167,44,.18);
+}
+
+.btn-white {
+    background: white;
+
+    color: var(--black);
+}
+
+.btn-outline {
+    color: white;
+
+    background: transparent;
+
+    border:
+        1px solid
+        rgba(255,255,255,.22);
+}
+
+
+/* =========================================================
+   HERO LOGO
+   ========================================================= */
+
+/*
+   THIS IS THE IMPORTANT FIX.
+
+   Your uploaded image has a light/white background
+   surrounding the black logo.
+
+   "darken" tells the browser:
+
+   - keep the darker black artwork
+   - allow the dark website background to show
+     through the light portion
+
+   This prevents the logo from looking like a
+   rectangular card.
+*/
+
+.hero-logo-area {
+    position: relative;
+    min-height: 420px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 40px;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(255,255,255,.06),
+            transparent 65%
+        );
+}
+
+/* subtle grey transparent rectangle */
+.hero-logo-area::before {
+    content: "";
+
+    position: absolute;
+
+    width: min(470px, 92%);
+    height: 350px;
+
+    background: rgba(190,190,190,.13);
+
+    border: 1px solid rgba(255,255,255,.10);
+
+    border-radius: 18px;
+
+    backdrop-filter: blur(5px);
+
+    box-shadow:
+        0 25px 70px rgba(0,0,0,.20);
+}
+
+.hero-logo {
+    position: relative;
+    z-index: 3;
+
+    width: min(390px, 82%);
+
+    height: auto;
+
+    /* Your inverted logo is already white */
+    mix-blend-mode: normal;
+
+    filter: none;
+
+    transform: rotate(-1deg);
+
+    transition: .3s ease;
+}
+
+
+* =========================================
+   HOSANNA COMMUNITY YOUTH — HERO LOGO
+   ========================================= */
+
+.hero-logo {
+    position: relative;
+    z-index: 3;
+
+    width: min(390px, 82%);
+    height: auto;
+
+    /* Make sure the image itself has no CSS background */
+    background: transparent !important;
+
+    /* Keep the logo crisp */
+    mix-blend-mode: normal;
+    filter: none;
+
+    /* No rotation */
+    transform: scale(1);
+
+    /* Smooth pop effect */
+    transition:
+        transform 0.35s ease,
+        filter 0.35s ease;
+
+    /*
+     * SOFT LEFT + RIGHT EDGE FADE
+     *
+     * The centre remains completely visible.
+     * The left and right edges gradually disappear.
+     */
+    -webkit-mask-image: linear-gradient(
+        to right,
+        transparent 0%,
+        rgba(0, 0, 0, 0.25) 5%,
+        rgba(0, 0, 0, 0.65) 11%,
+        #000 19%,
+        #000 81%,
+        rgba(0, 0, 0, 0.65) 89%,
+        rgba(0, 0, 0, 0.25) 95%,
+        transparent 100%
+    );
+
+    mask-image: linear-gradient(
+        to right,
+        transparent 0%,
+        rgba(0, 0, 0, 0.25) 5%,
+        rgba(0, 0, 0, 0.65) 11%,
+        #000 19%,
+        #000 81%,
+        rgba(0, 0, 0, 0.65) 89%,
+        rgba(0, 0, 0, 0.25) 95%,
+        transparent 100%
+    );
+
+    /*
+     * Prevent the browser from showing an accidental
+     * background around the transparent image.
+     */
+    display: block;
+}
+
+
+/* =========================================
+   LOGO HOVER — SUBTLE POP
+   ========================================= */
+
+.hero-logo:hover {
+    transform: scale(1.06);
+
+    filter: drop-shadow(
+        0 12px 28px rgba(255, 255, 255, 0.10)
+    );
+}
+
+
+
+
+
+
+
+/* =========================================================
+   FRIDAY LOCATION
+   ========================================================= */
+
+.friday-section {
+    margin-top: -65px;
+
+    position: relative;
+
+    z-index: 20;
+}
+
+.friday-card {
+
+    background: white;
+
+    border-radius: var(--radius);
+
+    padding: 30px;
+
+    box-shadow: var(--shadow);
+
+    border-left:
+        7px solid
+        var(--gold);
+
+    display: grid;
+
+    grid-template-columns:
+        1fr
+        auto;
+
+    gap: 30px;
+
+    align-items: center;
+}
+
+.friday-label {
+
+    color: var(--burgundy);
+
+    font-size: .7rem;
+
+    text-transform: uppercase;
+
+    letter-spacing: .14em;
+
+    font-weight: 900;
+}
+
+.friday-card h2 {
+
+    font-size: 1.9rem;
+
+    letter-spacing: -.04em;
+
+    margin-top: 3px;
+}
+
+.friday-details {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 15px;
+
+    color: var(--muted);
+
+    font-size: .9rem;
+
+    margin-top: 8px;
+}
+
+.friday-address {
+
+    color: var(--muted);
+
+    font-size: .9rem;
+
+    margin-top: 5px;
+}
+
+
+/* =========================================================
+   GENERAL SECTIONS
+   ========================================================= */
+
+section {
+    padding: 110px 0;
+}
+
+.section-heading {
+    max-width: 720px;
+
+    margin-bottom: 50px;
+}
+
+.section-heading h2 {
+
+    font-size:
+        clamp(
+            2.5rem,
+            5vw,
+            4.5rem
+        );
+
+    line-height: .95;
+
+    letter-spacing: -.06em;
+
+    margin-bottom: 18px;
+}
+
+.section-heading p {
+    color: var(--muted);
+
+    font-size: 1.04rem;
+}
+
+
+/* =========================================================
+   ABOUT
+   ========================================================= */
+
+.belong {
+    background: var(--white);
+}
+
+.belong-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        .85fr
+        1.15fr;
+
+    gap: 70px;
+
+    align-items: center;
+}
+
+.big-message {
+
+    font-size:
+        clamp(
+            2.5rem,
+            5vw,
+            4.7rem
+        );
+
+    font-weight: 900;
+
+    line-height: .95;
+
+    letter-spacing: -.065em;
+}
+
+.big-message span {
+    color: var(--burgundy);
+}
+
+.age-pill {
+
+    display: inline-block;
+
+    margin-top: 22px;
+
+    padding: 9px 15px;
+
+    border-radius: 999px;
+
+    background: var(--sand);
+
+    font-size: .82rem;
+
+    font-weight: 900;
+}
+
+.belong-copy p {
+
+    color: var(--muted);
+
+    margin-bottom: 18px;
+
+    font-size: 1.03rem;
+}
+
+
+/* =========================================================
+   MISSION
+   ========================================================= */
+
+.mission {
+
+    background:
+        linear-gradient(
+            135deg,
+            #0b0b0b,
+            #171717
+        );
+
+    color: white;
+
+    text-align: center;
+}
+
+.mission-inner {
+
+    max-width: 950px;
+
+    margin: auto;
+}
+
+.mission h2 {
+
+    font-size:
+        clamp(
+            3rem,
+            7vw,
+            6.5rem
+        );
+
+    line-height: .9;
+
+    letter-spacing: -.075em;
+
+    margin-bottom: 28px;
+}
+
+.mission h2 span {
+    color: var(--gold);
+}
+
+.mission p {
+
+    max-width: 800px;
+
+    margin: auto;
+
+    color:
+        rgba(255,255,255,.70);
+
+    font-size: 1.12rem;
+}
+
+
+/* =========================================================
+   VERSE
+   ========================================================= */
+
+.verse {
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--burgundy-dark),
+            var(--burgundy)
+        );
+
+    color: white;
+
+    text-align: center;
+}
+
+.quote-mark {
+
+    font-size: 5rem;
+
+    color: var(--gold);
+
+    line-height: .7;
+}
+
+.verse blockquote {
+
+    max-width: 900px;
+
+    margin:
+        25px auto;
+
+    font-size:
+        clamp(
+            2rem,
+            4.5vw,
+            4rem
+        );
+
+    line-height: 1.04;
+
+    font-weight: 900;
+
+    letter-spacing: -.05em;
+}
+
+.verse cite {
+
+    font-style: normal;
+
+    color: var(--gold-light);
+
+    font-size: .8rem;
+
+    font-weight: 900;
+
+    letter-spacing: .15em;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================================================
+   ACTIVITIES
+   ========================================================= */
+
+.activities {
+    background: var(--cream);
+}
+
+.activity-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4,1fr);
+
+    gap: 16px;
+}
+
+.activity {
+
+    background: white;
+
+    border:
+        1px solid
+        var(--border);
+
+    border-radius: var(--radius);
+
+    padding: 28px;
+
+    min-height: 220px;
+
+    transition: .25s;
+}
+
+.activity:hover {
+
+    transform:
+        translateY(-5px);
+
+    box-shadow: var(--shadow);
+}
+
+.activity-icon {
+
+    font-size: 2.2rem;
+
+    margin-bottom: 20px;
+}
+
+.activity h3 {
+
+    margin-bottom: 8px;
+
+    letter-spacing: -.025em;
+}
+
+.activity p {
+
+    color: var(--muted);
+
+    font-size: .9rem;
+}
+
+
+/* =========================================================
+   STORY
+   ========================================================= */
+
+.story {
+    background: var(--white);
+}
+
+.story-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr
+        1fr;
+
+    gap: 60px;
+}
+
+.story-dark {
+
+    background:
+        linear-gradient(
+            135deg,
+            #111,
+            var(--burgundy-dark)
+        );
+
+    color: white;
+
+    padding: 45px;
+
+    border-radius: 30px;
+}
+
+.story-dark h3 {
+
+    font-size: 2.3rem;
+
+    line-height: 1;
+
+    letter-spacing: -.04em;
+
+    margin-bottom: 18px;
+}
+
+.story-dark p {
+
+    color:
+        rgba(255,255,255,.7);
+}
+
+.story-copy p {
+
+    color: var(--muted);
+
+    margin-bottom: 19px;
+}
+
+
+/* =========================================================
+   TESTIMONY
+   ========================================================= */
+
+.testimony {
+    background: var(--sand);
+}
+
+.testimony-card {
+
+    max-width: 900px;
+
+    margin: auto;
+
+    background: white;
+
+    border-radius: 30px;
+
+    padding: 50px;
+
+    box-shadow: var(--shadow);
+}
+
+.testimony-quote {
+
+    font-size:
+        clamp(
+            1.9rem,
+            4vw,
+            3.5rem
+        );
+
+    line-height: 1;
+
+    font-weight: 900;
+
+    letter-spacing: -.055em;
+
+    margin-bottom: 25px;
+}
+
+.placeholder {
+
+    padding: 25px;
+
+    border:
+        2px dashed
+        rgba(0,0,0,.15);
+
+    border-radius: 18px;
+
+    color: var(--muted);
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   OUTREACH
+   ========================================================= */
+
+.outreach {
+    background: white;
+}
+
+.outreach-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr
+        1fr;
+
+    gap: 20px;
+}
+
+.outreach-card {
+
+    padding: 40px;
+
+    background: var(--cream);
+
+    border-radius: 28px;
+}
+
+.outreach-card h3 {
+
+    font-size: 2.1rem;
+
+    line-height: 1;
+
+    margin-bottom: 18px;
+}
+
+.outreach-card p {
+
+    color: var(--muted);
+
+    margin-bottom: 20px;
+}
+
+.places {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 9px;
+}
+
+.place {
+
+    background: white;
+
+    border-radius: 999px;
+
+    padding: 9px 13px;
+
+    font-size: .8rem;
+
+    font-weight: 850;
+}
+
+
+/* =========================================================
+   EVENTS
+   ========================================================= */
+
+.event {
+
+    background: var(--burgundy);
+
+    color: white;
+}
+
+.event-card {
+
+    padding: 48px;
+
+    border-radius: 32px;
+
+    background:
+        rgba(0,0,0,.15);
+
+    border:
+        1px solid
+        rgba(255,255,255,.13);
+
+    display: grid;
+
+    grid-template-columns:
+        1fr
+        auto;
+
+    gap: 30px;
+
+    align-items: center;
+}
+
+.event-date {
+
+    color: var(--gold-light);
+
+    text-transform: uppercase;
+
+    letter-spacing: .15em;
+
+    font-size: .75rem;
+
+    font-weight: 900;
+}
+
+.event-card h2 {
+
+    font-size:
+        clamp(
+            2.8rem,
+            6vw,
+            5.3rem
+        );
+
+    line-height: .9;
+
+    letter-spacing: -.07em;
+
+    margin:
+        10px 0 20px;
+}
+
+.event-card p {
+
+    color:
+        rgba(255,255,255,.72);
+
+    max-width: 620px;
+}
+
+
+/* =========================================================
+   LEADERS
+   ========================================================= */
+
+.leaders {
+    background: var(--cream);
+}
+
+.leader-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr
+        1fr;
+
+    gap: 20px;
+}
+
+.leader-card {
+
+    background: white;
+
+    border:
+        1px solid
+        var(--border);
+
+    border-radius: 28px;
+
+    padding: 30px;
+}
+
+.leader-photo {
+
+    height: 270px;
+
+    border-radius: 20px;
+
+    display: grid;
+
+    place-items: center;
+
+    color:
+        rgba(255,255,255,.55);
+
+    background:
+        linear-gradient(
+            135deg,
+            #111,
+            var(--burgundy)
+        );
+
+    margin-bottom: 23px;
+}
+
+.leader-role {
+
+    color: var(--burgundy);
+
+    font-size: .75rem;
+
+    font-weight: 900;
+
+    letter-spacing: .12em;
+
+    text-transform: uppercase;
+
+    margin-bottom: 6px;
+}
+
+.leader-card h3 {
+
+    font-size: 1.8rem;
+
+    letter-spacing: -.03em;
+}
+
+.leader-card p {
+
+    color: var(--muted);
+
+    margin-top: 8px;
+}
+
+
+/* =========================================================
+   REACH OUT
+   ========================================================= */
+
+.reach {
+
+    background: var(--black);
+
+    color: white;
+}
+
+.reach-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        .9fr
+        1.1fr;
+
+    gap: 70px;
+
+    align-items: center;
+}
+
+.reach h2 {
+
+    font-size:
+        clamp(
+            3rem,
+            6vw,
+            5.5rem
+        );
+
+    line-height: .9;
+
+    letter-spacing: -.07em;
+
+    margin-bottom: 22px;
+}
+
+.reach h2 span {
+    color: var(--gold);
+}
+
+.reach-copy p {
+
+    color:
+        rgba(255,255,255,.69);
+
+    margin-bottom: 18px;
+}
+
+.contact-form {
+
+    background: white;
+
+    color: var(--black);
+
+    padding: 35px;
+
+    border-radius: 28px;
+}
+
+.contact-form h3 {
+
+    font-size: 1.8rem;
+
+    margin-bottom: 5px;
+}
+
+.form-intro {
+
+    color: var(--muted);
+
+    font-size: .85rem;
+
+    margin-bottom: 24px;
+}
+
+.form-group {
+
+    margin-bottom: 16px;
+}
+
+label {
+
+    display: block;
+
+    font-size: .78rem;
+
+    font-weight: 900;
+
+    margin-bottom: 6px;
+}
+
+input,
+textarea,
+select {
+
+    width: 100%;
+
+    padding: 13px 14px;
+
+    border:
+        1px solid
+        #ddd;
+
+    border-radius: 12px;
+
+    background: #fafafa;
+
+    outline: none;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+
+    border-color: var(--gold);
+
+    box-shadow:
+        0 0 0 3px
+        rgba(212,167,44,.12);
+}
+
+textarea {
+
+    min-height: 140px;
+
+    resize: vertical;
+}
+
+.form-note {
+
+    font-size: .7rem;
+
+    color: var(--muted);
+
+    margin-top: 12px;
+}
+
+
+/* =========================================================
+   SPONSOR
+   ========================================================= */
+
+.sponsor {
+
+    background: var(--gold);
+
+    color: var(--black);
+
+    text-align: center;
+}
+
+.sponsor-inner {
+
+    max-width: 900px;
+
+    margin: auto;
+}
+
+.sponsor h2 {
+
+    font-size:
+        clamp(
+            3rem,
+            6vw,
+            5.5rem
+        );
+
+    line-height: .9;
+
+    letter-spacing: -.07em;
+
+    margin-bottom: 25px;
+}
+
+.sponsor p {
+
+    max-width: 730px;
+
+    margin:
+        0 auto 18px;
+
+    font-size: 1.04rem;
+}
+
+
+/* =========================================================
+   GALLERY
+   ========================================================= */
+
+.gallery {
+    background: var(--white);
+}
+
+.gallery-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3,1fr);
+
+    gap: 14px;
+}
+
+.gallery-item {
+
+    height: 250px;
+
+    border-radius: 20px;
+
+    display: grid;
+
+    place-items: center;
+
+    color:
+        rgba(255,255,255,.55);
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--burgundy),
+            var(--black)
+        );
+
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   CONTACT
+   ========================================================= */
+
+.contact {
+    background: var(--cream);
+}
+
+.contact-card {
+
+    background: white;
+
+    padding: 35px;
+
+    border-radius: 25px;
+
+    border:
+        1px solid
+        var(--border);
+}
+
+.contact-card p {
+
+    color: var(--muted);
+
+    margin-top: 7px;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+footer {
+
+    background: #080808;
+
+    color: white;
+
+    padding:
+        60px
+        0
+        25px;
+}
+
+.footer-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        1.4fr
+        1fr
+        1fr;
+
+    gap: 50px;
+
+    padding-bottom: 45px;
+
+    border-bottom:
+        1px solid
+        rgba(255,255,255,.1);
+}
+
+footer h3 {
+    margin-bottom: 14px;
+}
+
+footer p,
+footer a {
+
+    color:
+        rgba(255,255,255,.55);
+
+    font-size: .9rem;
+}
+
+.footer-links {
+
+    display: grid;
+
+    gap: 8px;
+}
+
+.footer-links a:hover {
+    color: var(--gold);
+}
+
+
+/*
+   Clean public footer.
+*/
+
+.footer-bottom {
+    padding-top: 24px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+
+    color: rgba(255,255,255,.45);
+
+    font-size: .72rem;
+    font-weight: 400;
+
+    white-space: nowrap;
+}
+
+.footer-left {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+
+    color: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+.footer-left span {
+    color: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+.footer-left a {
+    color: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    text-decoration: none;
+}
+
+.footer-loved {
+    color: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+
+
+
+
+/* =========================================================
+   ADMIN
+   ========================================================= */
+
+.modal {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 5000;
+
+    background:
+        rgba(0,0,0,.75);
+
+    backdrop-filter: blur(8px);
+
+    display: none;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 20px;
+
+    overflow-y: auto;
+}
+
+.modal.active {
+    display: flex;
+}
+
+.modal-box {
+
+    width:
+        min(
+            100%,
+            1000px
+        );
+
+    background: white;
+
+    border-radius: 25px;
+
+    padding: 35px;
+
+    position: relative;
+
+    box-shadow:
+        0 30px 100px
+        rgba(0,0,0,.3);
+}
+
+.close-modal {
+
+    position: absolute;
+
+    right: 18px;
+    top: 12px;
+
+    border: 0;
+
+    background: none;
+
+    font-size: 1.8rem;
+}
+
+.admin-dashboard {
+    display: none;
+}
+
+.admin-dashboard.active {
+    display: block;
+}
+
+.admin-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr
+        1fr;
+
+    gap: 18px;
+}
+
+.admin-panel {
+
+    border:
+        1px solid
+        #ddd;
+
+    padding: 20px;
+
+    border-radius: 18px;
+}
+
+.admin-panel h3 {
+    margin-bottom: 15px;
+}
+
+.admin-actions {
+
+    display: flex;
+
+    gap: 10px;
+
+    margin-top: 20px;
+}
+
+.security-warning {
+
+    background: #fff5d6;
+
+    border:
+        1px solid
+        #e5ca73;
+
+    color: #5d4a12;
+
+    padding: 15px;
+
+    border-radius: 12px;
+
+    font-size: .75rem;
+
+    margin-top: 20px;
+}
+
+
+/* =========================================================
+   TOAST
+   ========================================================= */
+
+.toast {
+
+    position: fixed;
+
+    right: 25px;
+
+    bottom: 25px;
+
+    z-index: 6000;
+
+    background: var(--black);
+
+    color: white;
+
+    padding: 14px 18px;
+
+    border-radius: 12px;
+
+    transform:
+        translateY(120px);
+
+    transition: .3s;
+}
+
+.toast.show {
+    transform:
+        translateY(0);
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .menu-button {
+        display: block;
+    }
+
+    .nav-links {
+
+        display: none;
+
+        position: absolute;
+
+        top: 78px;
+
+        left: 0;
+
+        width: 100%;
+
+        padding: 25px;
+
+        background: var(--black);
+
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+    .nav-links.open {
+        display: flex;
+    }
+
+    .hero-grid,
+    .belong-grid,
+    .story-grid,
+    .outreach-grid,
+    .reach-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+    .activity-grid {
+        grid-template-columns:
+            repeat(2,1fr);
+    }
+
+    .hero-logo-area {
+        min-height: 350px;
+    }
+
+    .leader-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-grid {
+        grid-template-columns:
+            1fr 1fr;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .container {
+        width:
+            calc(100% - 28px);
+    }
+
+    section {
+        padding:
+            75px 0;
+    }
+
+    .hero {
+        padding-top:
+            125px;
+    }
+
+    .hero h1 {
+        font-size:
+            3.5rem;
+    }
+
+    .hero-logo-area {
+        min-height: 300px;
+    }
+
+    .hero-logo {
+        width:
+            min(
+                85%,
+                290px
+            );
+    }
+
+    .friday-card {
+        grid-template-columns: 1fr;
+    }
+
+    .activity-grid,
+    .gallery-grid,
+    .admin-grid,
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .story-dark,
+    .testimony-card,
+    .outreach-card,
+    .event-card,
+    .leader-card,
+    .contact-form,
+    .contact-card {
+        padding: 25px;
+    }
+
+    .event-card {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+    }
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     NAVIGATION
+     ========================================================= -->
+
+<header>
+
+<div class="container nav">
+
+<a href="#home" class="brand">
+
+<img
+src="logo.png"
+alt="Hosanna Community Youth logo"
+>
+
+<div class="brand-text">
+
+HOSANNA COMMUNITY
+
+<small>Youth</small>
+
+</div>
+
+</a>
+
+
+<button
+class="menu-button"
+id="menuButton"
+aria-label="Open navigation"
+>
+☰
+</button>
+
+
+<nav
+class="nav-links"
+id="navLinks"
+>
+
+<a href="#about">
+About
+</a>
+
+<a href="#what-we-do">
+What We Do
+</a>
+
+<a href="#events">
+Events
+</a>
+
+<a href="#leaders">
+Our Team
+</a>
+
+<a href="#reach-out">
+Reach Out
+</a>
+
+<a
+href="#contact"
+class="nav-join"
+>
+Join Us
+</a>
+
+</nav>
+
+</div>
+
+</header>
+
+
+
+<!-- =========================================================
+     HERO
+     ========================================================= -->
+
+<section
+class="hero"
+id="home"
+>
+
+<div class="container hero-grid">
+
+
+<div>
+
+<div class="eyebrow">
+Hosanna Community Church
+</div>
+
+
+<h1>
+
+We are the
+
+<span>
+hands & feet
+</span>
+
+of God's love.
+
+</h1>
+
+
+<p class="hero-description">
+
+A community brought together by Christ,
+growing in faith, serving others and learning
+to display God's love through the way we live.
+
+</p>
+
+
+<div class="hero-buttons">
+
+<a
+href="#friday"
+class="btn btn-primary"
+>
+Find This Friday
+</a>
+
+
+<a
+href="#reach-out"
+class="btn btn-outline"
+>
+I Need Someone To Talk To
+</a>
+
+</div>
+
+</div>
+
+
+
+<!-- =====================================================
+     LOGO
+     ===================================================== -->
+
+<div class="hero-logo-area">
+
+<img
+class="hero-logo"
+src="logo.png"
+alt="Hosanna Community Youth"
+>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- =========================================================
+     FRIDAY
+     ========================================================= -->
+
+<div
+class="container friday-section"
+id="friday"
+>
+
+<div class="friday-card">
+
+<div>
+
+<div class="friday-label">
+THIS FRIDAY
+</div>
+
+
+<h2 id="publicVenue">
+Meeting location will be announced.
+</h2>
+
+
+<div class="friday-details">
+
+<span>
+🕖 Every Friday • 7:00 PM
+</span>
+
+<span>
+📍 Glenhills
+</span>
+
+</div>
+
+
+<div
+class="friday-address"
+id="publicAddress"
+>
+Our meeting point changes,
+so check here each week.
+</div>
+
+</div>
+
+
+<a
+id="mapsButton"
+href="#contact"
+class="btn btn-primary"
+>
+Get In Touch
+</a>
+
+</div>
+
+</div>
+
+
+
+<!-- =========================================================
+     ABOUT
+     ========================================================= -->
+
+<section
+class="belong"
+id="about"
+>
+
+<div class="container belong-grid">
+
+
+<div>
+
+<div class="big-message">
+
+Come as you are.
+
+<span>
+Grow together.
+</span>
+
+</div>
+
+
+<div class="age-pill">
+Open to ages 13–60
+</div>
+
+</div>
+
+
+
+<div class="belong-copy">
+
+<div class="section-heading">
+
+<div class="eyebrow">
+You belong here
+</div>
+
+<h2>
+A place to belong,
+believe and grow.
+</h2>
+
+</div>
+
+
+<p>
+
+Hosanna Community Youth is more than
+a Friday-night gathering.
+
+We are a family united by the love of Christ.
+
+</p>
+
+
+<p>
+
+We are a community of people from
+13 to 60, coming together from different
+backgrounds and experiences, with one
+thing in common — a desire to know Christ,
+live His love and share that love with others.
+
+</p>
+
+
+<p>
+
+You don't need to have everything figured out
+before you walk through our doors.
+
+</p>
+
+
+<p>
+
+Whether you've followed Christ for years,
+are just beginning your journey, or simply
+want somewhere to belong —
+
+<strong>
+there is a place for you here.
+</strong>
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================================================
+     MISSION
+     ========================================================= -->
+
+<section class="mission">
+
+<div class="container mission-inner">
+
+<div class="eyebrow">
+Our heart
+</div>
+
+
+<h2>
+
+We are the
+
+<span>
+hands & feet
+</span>
+
+of God's love.
+
+</h2>
+
+
+<p>
+
+For us, God's love isn't only something
+we talk about.
+
+It is something we want people to see
+in the way we live, serve, encourage,
+worship and care for one another.
+
+</p>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================================================
+     VERSE
+     ========================================================= -->
+
+<section class="verse">
+
+<div class="container">
+
+<div class="quote-mark">
+“
+</div>
+
+
+<blockquote>
+
+How can a young person stay on the path
+of purity? By living according to your word.
+
+</blockquote>
+
+
+<cite>
+Psalm 119:9
+</cite>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================================================
+     WHAT WE DO
+     ========================================================= -->
+
+<section
+class="activities"
+id="what-we-do"
+>
+
+<div class="container">
+
+<div class="section-heading">
+
+<div class="eyebrow">
+Life together
+</div>
+
+<h2>
+Faith that doesn't stay inside a building.
+</h2>
+
+<p>
+We worship, laugh, create, serve and grow together.
+</p>
+
+</div>
+
+
+<div class="activity-grid">
+
+
+<div class="activity">
+
+<div class="activity-icon">🙏</div>
+
+<h3>
+Worship & Prayer
+</h3>
+
+<p>
+Coming together to seek God,
+worship Him and grow in faith.
+</p>
+
+</div>
+
+
+<div class="activity">
+
+<div class="activity-icon">🎤</div>
+
+<h3>
+Music
+</h3>
+
+<p>
+Using our gifts and creativity
+to glorify God.
+</p>
+
+</div>
+
+
+<div class="activity">
+
+<div class="activity-icon">🎮</div>
+
+<h3>
+Games & Fellowship
+</h3>
+
+<p>
+Following Christ doesn't mean
+we can't have fun together.
+</p>
+
+</div>
+
+
+<div class="activity">
+
+<div class="activity-icon">🎨</div>
+
+<h3>
+Creative Activities
+</h3>
+
+<p>
+Making space for people to express
+themselves and use their gifts.
+</p>
+
+</div>
+
+
+<div class="activity">
+
+<div class="activity-icon">🤝</div>
+
+<h3>
+Community Outreach
+</h3>
+
+<p>
+Taking God's love beyond our
+gatherings and into the community.
+</p>
+
+</div>
+
+
+<div class="activity">
+
+<div class="activity-icon">🏕️</div>
+
+<h3>
+Camps & Retreats
+</h3>
+
+<p>
+Creating space to reflect,
+grow, connect and seek God.
+</p>
+
+</div>
+
+
+<div class="activity">
+
+<div class="activity-icon">🎉</div>
+
+<h3>
+Youth Events
+</h3>
+
+<p>
+Special gatherings that bring
+our community together.
+</p>
+
+</div>
+
+
+<div class="activity">
+
+<div class="activity-icon">🌱</div>
+
+<h3>
+Mentorship & Guidance
+</h3>
+
+<p>
+Guidance, encouragement and
+support when someone needs it.
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================================================
+     STORY
+     ========================================================= -->
+
+<section class="story">
+
+<div class="container story-grid">
+
+
+<div class="story-dark">
+
+<div class="eyebrow">
+Our story
+</div>
+
+<h3>
+We don't have everything.
+</h3>
+
+<p>
+
+But we believe you don't need
+to have everything to give something.
+
+</p>
+
+</div>
+
+
+
+<div class="story-copy">
+
+<p>
+
+Hosanna Community Youth exists because
+we want to expose more people to the love
+of Christ and create a space where people
+can encounter that love through both
+words and actions.
+
+</p>
+
+
+<p>
+
+We are a church community that is still
+growing and finding our way.
+
+We have challenges and limitations,
+but we believe those things don't stop
+us from serving where we can.
+
+</p>
+
+
+<p>
+
+We've had opportunities to spend time at
+<strong>Happy Homes in Kearsney</strong>
+and volunteer at
+<strong>RA Moodley Homes.</strong>
+
+</p>
+
+
+<p>
+
+We may not always have much to give,
+but we believe that a little love,
+a little time, a helping hand and
+a willing heart can still make a difference.
+
+</p>
+
+
+<p>
+
+<strong>
+Being the hands and feet of God's love
+starts with being willing to show up.
+</strong>
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================================================
+     TESTIMONY
+     ========================================================= -->
+
+<section class="testimony">
+
+<div class="container">
+
+<div
+class="section-heading"
+style="
+margin:auto auto 50px;
+text-align:center;
+"
+>
+
+<div class="eyebrow">
+Real stories. Real faith.
+</div>
+
+<h2>
+God meets us in real life.
+</h2>
+
+<p>
+Every person's journey with Christ
+looks different.
+</p>
+
+</div>
+
+
+
+<div class="testimony-card">
+
+<div class="testimony-quote">
+
+“Sometimes you don't find God
+when life is easy.
+
+Sometimes you find Him
+when you're scared.”
+
+</div>
+
+
+<div class="placeholder">
+
+<strong>
+Personal testimony coming soon.
+</strong>
+
+<br><br>
+
+A member of Hosanna Community Youth
+will share their journey of finding Christ
+and what faith has meant in their life.
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================================================
+     OUTREACH
+     ========================================================= -->
+
+<section class="outreach">
+
+<div class="container outreach-grid">
+
+
+<div class="outreach-card">
+
+<div class="eyebrow">
+Serving others
+</div>
+
+<h3>
+Love doesn't stop at our gathering.
+</h3>
+
+<p>
+
+We want God's love to be visible
+in our community.
+
+Wherever we have the opportunity,
+we want to serve, encourage and help.
+
+</p>
+
+
+<div class="places">
+
+<span class="place">
+Happy Homes — Kearsney
+</span>
+
+<span class="place">
+RA Moodley Homes
+</span>
+
+</div>
+
+</div>
+
+
+
+<div class="outreach-card">
+
+<div class="eyebrow">
+Our hope
+</div>
+
+<h3>
+Reaching more people.
+</h3>
+
+<p>
+
+Our desire is to expose more people
+to Christ's love and open doors for
+partnerships and sponsorships that
+allow us to serve our community
+in greater ways.
+
+</p>
+
+
+<a
+href="#sponsor"
+class="btn btn-primary"
+>
+Support The Mission
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================================================
+     EVENT
+     ========================================================= -->
+
+<section
+class="event"
+id="events"
+>
+
+<div class="container">
+
+<div class="event-card">
+
+
+<div>
+
+<div
+class="event-date"
+id="publicEventDate"
+>
+26 October 2026
+</div>
+
+
+<h2 id="publicEventName">
+Worship Night
+</h2>
+
+
+<p>
+
+A night of worship, prayer, reflection
+aznd seeking God's presence together.
+
+</p>
+
+</div>
+
+
+<div>
+
+<span class="btn btn-white">
+Coming Soon
+</span>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================================================
+     LEADERS
+     ========================================================= -->
+
+<section
+class="leaders"
+id="leaders"
+>
+
+<div class="container">
+
+<div class="section-heading">
+
+<div class="eyebrow">
+Our people
+</div>
+
+<h2>
+The people serving our community.
+</h2>
+
+</div>
+
+
+<div class="leader-grid">
+
+
+<div class="leader-card">
+
+<div class="leader-photo">
+Photo coming soon
+</div>
+
+<div class="leader-role">
+Youth Leader
+</div>
+
+<h3>
+Immanuel
+</h3>
+
+<p>
+A message from Immanuel is coming soon.
+</p>
+
+</div>
+
+
+
+<div class="leader-card">
+
+<div class="leader-photo">
+Photo coming soon
+</div>
+
+<div class="leader-role">
+Pastor
+</div>
+
+<h3>
+Louis Abraham
+</h3>
+
+<p>
+A message from Pastor Louis is coming soon.
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================================================
+     REACH OUT
+     ========================================================= -->
+
+<section
+class="reach"
+id="reach-out"
+>
+
+<div class="container reach-grid">
+
+
+<div class="reach-copy">
+
+<div class="eyebrow">
+You don't have to walk alone
+</div>
+
+
+<h2>
+
+Lost?
+
+<span>
+Reach out.
+</span>
+
+</h2>
+
+
+<p>
+
+Sometimes life becomes heavy.
+
+You may feel lost, confused,
+lonely, overwhelmed, or simply
+unsure of where to turn.
+
+</p>
+
+
+<p>
+
+You don't need to have all the answers.
+
+You don't need to have the right words.
+
+Just take the first step.
+
+</p>
+
+
+<p>
+
+If you need someone to talk to,
+need guidance in your faith journey,
+or simply don't know where to begin,
+reach out to us.
+
+</p>
+
+
+<p>
+
+<strong>
+
+You are seen.
+You are valued.
+You are loved.
+
+And you don't have to walk alone.
+
+</strong>
+
+</p>
+
+</div>
+
+
+
+<form
+class="contact-form"
+id="reachForm"
+>
+
+<h3>
+Tell us what's on your heart.
+</h3>
+
+<p class="form-intro">
+
+You don't have to know exactly what to say.
+
+</p>
+
+
+<div class="form-group">
+
+<label>
+Name
+</label>
+
+<input
+id="reachName"
+type="text"
+placeholder="Your name"
+>
+
+</div>
+
+
+<div class="form-group">
+
+<label>
+Email
+</label>
+
+<input
+id="reachEmail"
+type="email"
+placeholder="you@example.com"
+required
+>
+
+</div>
+
+
+<div class="form-group">
+
+<label>
+What would you like to talk about?
+</label>
+
+<select id="reachTopic">
+
+<option>
+I need guidance
+</option>
+
+<option>
+I have questions about faith
+</option>
+
+<option>
+I would like prayer
+</option>
+
+<option>
+I'm going through something
+</option>
+
+<option>
+Something else
+</option>
+
+</select>
+
+</div>
+
+
+<div class="form-group">
+
+<label>
+Message
+</label>
+
+<textarea
+id="reachMessage"
+placeholder="Tell us whatever you feel comfortable sharing..."
+required
+></textarea>
+
+</div>
+
+
+<button
+class="btn btn-primary"
+type="submit"
+>
+Send Message
+</button>
+
+
+<div class="form-note">
+
+This form is for support and guidance.
+It is not an emergency service.
+
+If you or someone else is in immediate danger,
+please contact appropriate emergency or
+professional services.
+
+</div>
+
+</form>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================================================
+     SPONSORSHIP
+     ========================================================= -->
+
+<section
+class="sponsor"
+id="sponsor"
+>
+
+<div class="container sponsor-inner">
+
+<div class="eyebrow">
+Partner with us
+</div>
+
+
+<h2>
+Help us take God's love further.
+</h2>
+
+
+<p>
+
+We are a growing community with a simple desire:
+
+to expose more people to Christ's love,
+serve our community and create meaningful
+opportunities for people to encounter God.
+
+</p>
+
+
+<p>
+
+Through partnerships and sponsorships,
+we hope to expand the work we're already
+doing and reach more people.
+
+</p>
+
+
+<a
+href="#contact"
+class="btn btn-white"
+>
+Become a Partner
+</a>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================================================
+     GALLERY
+     ========================================================= -->
+
+<section class="gallery">
+
+<div class="container">
+
+<div class="section-heading">
+
+<div class="eyebrow">
+Our moments
+</div>
+
+<h2>
+Life at Hosanna.
+</h2>
+
+<p>
+
+Photos from worship, fellowship,
+outreach, camps and community events
+will live here.
+
+</p>
+
+</div>
+
+
+<div class="gallery-grid">
+
+<div class="gallery-item">
+Photo coming soon
+</div>
+
+<div class="gallery-item">
+Photo coming soon
+</div>
+
+<div class="gallery-item">
+Photo coming soon
+</div>
+
+<div class="gallery-item">
+Photo coming soon
+</div>
+
+<div class="gallery-item">
+Photo coming soon
+</div>
+
+<div class="gallery-item">
+Photo coming soon
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================================================
+     CONTACT
+     ========================================================= -->
+
+<section
+class="contact"
+id="contact"
+>
+
+<div class="container">
+
+<div class="section-heading">
+
+<div class="eyebrow">
+Join us
+</div>
+
+<h2>
+Come join the family.
+</h2>
+
+<p>
+
+We meet every Friday at 7:00 PM.
+
+Because our meeting point changes, check 
+“This Friday's Location” for
+the latest venue.
+
+</p>
+
+</div>
+
+
+<div class="contact-card">
+
+<h3>
+Hosanna Community Youth
+</h3>
+
+<p>
+Glenhills
+</p>
+
+<p>
+Every Friday • 7:00 PM
+</p>
+
+<p id="publicEmail">
+Contact details coming soon.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================================================
+     FOOTER
+     ========================================================= -->
+
+<footer>
+
+<div class="container">
+
+<div class="footer-grid">
+
+
+<div>
+
+<h3>
+Hosanna Community Youth
+</h3>
+
+<p>
+We are the hands and feet of God's love.
+</p>
+
+<p style="margin-top:18px;">
+Hosanna Community Church
+</p>
+
+</div>
+
+
+
+<div>
+
+<h3>
+Explore
+</h3>
+
+<div class="footer-links">
+
+<a href="#about">
+About
+</a>
+
+<a href="#what-we-do">
+What We Do
+</a>
+
+<a href="#events">
+Events
+</a>
+
+<a href="#leaders">
+Our Team
+</a>
+
+<a href="#reach-out">
+Reach Out
+</a>
+
+</div>
+
+</div>
+
+
+
+<div>
+
+<h3>
+Connect
+</h3>
+
+<div class="footer-links">
+
+<a
+id="instagramLink"
+href="#"
+>
+Instagram
+</a>
+
+<a
+id="facebookLink"
+href="#"
+>
+Facebook
+</a>
+
+<a
+id="tiktokLink"
+href="#"
+>
+TikTok
+</a>
+
+<a
+id="youtubeLink"
+href="#"
+>
+YouTube
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<div class="footer-bottom">
+
+    <div class="footer-left">
+        © <span id="year"></span> Hosanna Community Youth
+        <span class="footer-divider">•</span>
+        Powered by KD Events & Media Design
+        <span class="footer-divider">|</span>
+        <a href="tel:+27718501648">071 850 1648</a>
+    </div>
+
+    <div class="footer-loved">
+        You are Loved • You Matter
+    </div>
+
+</div>
+
+
+</footer>
+
+
+
+<!-- =========================================================
+     ADMIN MODAL
+     ========================================================= -->
+
+<div
+class="modal"
+id="adminModal"
+>
+
+<div class="modal-box">
+
+
+<button
+class="close-modal"
+id="closeAdmin"
+>
+×
+</button>
+
+
+<!-- LOGIN -->
+
+<div id="loginView">
+
+<div class="eyebrow">
+Administration
+</div>
+
+<h2>
+Admin Login
+</h2>
+
+<p style="color:#777;margin:8px 0 25px;">
+Manage website information.
+</p>
+
+
+<form id="loginForm">
+
+<div class="form-group">
+
+<label>
+Username
+</label>
+
+<input
+id="adminUsername"
+required
+>
+
+</div>
+
+
+<div class="form-group">
+
+<label>
+Password
+</label>
+
+<input
+id="adminPassword"
+type="password"
+required
+>
+
+</div>
+
+
+<button
+class="btn btn-primary"
+type="submit"
+>
+Login
+</button>
+
+</form>
+
+
+<div class="security-warning">
+
+<strong>Development version:</strong>
+
+This admin system stores settings in the
+browser for this prototype.
+
+Before the website is publicly launched,
+the admin system should be connected to
+secure server-side authentication and a
+database.
+
+</div>
+
+</div>
+
+
+
+<!-- DASHBOARD -->
+
+<div
+class="admin-dashboard"
+id="dashboard"
+>
+
+<div class="eyebrow">
+Hosanna Admin
+</div>
+
+<h2>
+Website Dashboard
+</h2>
+
+<p style="color:#777;margin:8px 0 25px;">
+Update information displayed on the website.
+</p>
+
+
+<div class="admin-grid">
+
+
+<div class="admin-panel">
+
+<h3>
+📍 This Friday
+</h3>
+
+
+<div class="form-group">
+
+<label>
+Venue
+</label>
+
+<input
+id="adminVenue"
+placeholder="Venue name"
+>
+
+</div>
+
+
+<div class="form-group">
+
+<label>
+Address
+</label>
+
+<input
+id="adminAddress"
+placeholder="Address"
+>
+
+</div>
+
+
+<div class="form-group">
+
+<label>
+Google Maps link
+</label>
+
+<input
+id="adminMaps"
+type="url"
+placeholder="https://maps.google.com/..."
+>
+
+</div>
+
+</div>
+
+
+
+<div class="admin-panel">
+
+<h3>
+📅 Upcoming Event
+</h3>
+
+
+<div class="form-group">
+
+<label>
+Event Name
+</label>
+
+<input
+id="adminEventName"
+>
+
+</div>
+
+
+<div class="form-group">
+
+<label>
+Event Date
+</label>
+
+<input
+id="adminEventDate"
+>
+
+</div>
+
+</div>
+
+
+
+<div class="admin-panel">
+
+<h3>
+📞 Contact
+</h3>
+
+
+<div class="form-group">
+
+<label>
+Email
+</label>
+
+<input
+id="adminEmail"
+type="email"
+>
+
+</div>
+
+
+<div class="form-group">
+
+<label>
+WhatsApp / Phone
+</label>
+
+<input
+id="adminPhone"
+>
+
+</div>
+
+</div>
+
+
+
+<div class="admin-panel">
+
+<h3>
+📱 Social Media
+</h3>
+
+
+<div class="form-group">
+
+<label>
+Instagram
+</label>
+
+<input
+id="adminInstagram"
+type="url"
+>
+
+</div>
+
+
+<div class="form-group">
+
+<label>
+Facebook
+</label>
+
+<input
+id="adminFacebook"
+type="url"
+>
+
+</div>
+
+
+<div class="form-group">
+
+<label>
+TikTok
+</label>
+
+<input
+id="adminTikTok"
+type="url"
+>
+
+</div>
+
+
+<div class="form-group">
+
+<label>
+YouTube
+</label>
+
+<input
+id="adminYoutube"
+type="url"
+>
+
+</div>
+
+</div>
+
+
+</div>
+
+
+<div class="admin-actions">
+
+<button
+class="btn btn-primary"
+id="saveAdmin"
+>
+Save Changes
+</button>
+
+
+<button
+class="btn"
+style="background:#eee;"
+id="logoutAdmin"
+>
+Logout
+</button>
+
+</div>
+
+
+<div class="security-warning">
+
+<strong>Important before launch:</strong>
+
+The browser-only login is for development.
+A production version should use proper
+authentication, encrypted passwords,
+a database and server-side access control.
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<!-- TOAST -->
+
+<div
+class="toast"
+id="toast"
+>
+Saved successfully.
+</div>
+
+
+
+<script>
+
+/* =========================================================
+   DEFAULT SETTINGS
+   ========================================================= */
+
+const defaults = {
+
+    venue: "",
+
+    address: "",
+
+    maps: "",
+
+    eventName:
+        "Worship Night",
+
+    eventDate:
+        "26 October 2026",
+
+    email: "",
+
+    phone: "",
+
+    instagram: "",
+
+    facebook: "",
+
+    tiktok: "",
+
+    youtube: ""
+
+};
+
+
+/* =========================================================
+   SETTINGS
+   ========================================================= */
+
+function getSettings() {
+
+    const saved =
+        localStorage.getItem(
+            "hosannaSettings"
+        );
+
+    if (!saved) {
+
+        return {
+            ...defaults
+        };
+
+    }
+
+    try {
+
+        return {
+            ...defaults,
+            ...JSON.parse(saved)
+        };
+
+    } catch {
+
+        return {
+            ...defaults
+        };
+
+    }
+
+}
+
+
+function saveSettings(settings) {
+
+    localStorage.setItem(
+        "hosannaSettings",
+        JSON.stringify(settings)
+    );
+
+}
+
+
+/* =========================================================
+   UPDATE PUBLIC WEBSITE
+   ========================================================= */
+
+function updateWebsite() {
+
+    const settings =
+        getSettings();
+
+
+    const venue =
+        document.getElementById(
+            "publicVenue"
+        );
+
+    const address =
+        document.getElementById(
+            "publicAddress"
+        );
+
+
+    if (settings.venue) {
+
+        venue.textContent =
+            settings.venue;
+
+    } else {
+
+        venue.textContent =
+            "Meeting location will be announced.";
+
+    }
+
+
+    if (settings.address) {
+
+        address.textContent =
+            settings.address;
+
+    } else {
+
+        address.textContent =
+            "Our meeting point changes, so check here each week.";
+
+    }
+
+
+    const mapsButton =
+        document.getElementById(
+            "mapsButton"
+        );
+
+
+    if (settings.maps) {
+
+        mapsButton.href =
+            settings.maps;
+
+        mapsButton.target =
+            "_blank";
+
+        mapsButton.textContent =
+            "Get Directions";
+
+    } else {
+
+        mapsButton.href =
+            "#contact";
+
+        mapsButton.removeAttribute(
+            "target"
+        );
+
+        mapsButton.textContent =
+            "Get In Touch";
+
+    }
+
+
+    document.getElementById(
+        "publicEventName"
+    ).textContent =
+        settings.eventName ||
+        "Worship Night";
+
+
+    document.getElementById(
+        "publicEventDate"
+    ).textContent =
+        settings.eventDate ||
+        "26 October 2026";
+
+
+    const email =
+        document.getElementById(
+            "publicEmail"
+        );
+
+
+    if (settings.email) {
+
+        email.innerHTML =
+            `Email:
+            <a
+            href="mailto:${settings.email}"
+            style="
+            color:var(--burgundy);
+            font-weight:800;
+            "
+            >
+            ${settings.email}
+            </a>`;
+
+    } else {
+
+        email.textContent =
+            "Contact details coming soon.";
+
+    }
+
+
+    updateSocial(
+        "instagramLink",
+        settings.instagram
+    );
+
+    updateSocial(
+        "facebookLink",
+        settings.facebook
+    );
+
+    updateSocial(
+        "tiktokLink",
+        settings.tiktok
+    );
+
+    updateSocial(
+        "youtubeLink",
+        settings.youtube
+    );
+
+}
+
+
+/* =========================================================
+   SOCIAL
+   ========================================================= */
+
+function updateSocial(id, url) {
+
+    const element =
+        document.getElementById(id);
+
+    if (!element) return;
+
+
+    if (url) {
+
+        element.href = url;
+
+        element.target = "_blank";
+
+        element.style.opacity = "1";
+
+    } else {
+
+        element.href = "#";
+
+        element.removeAttribute(
+            "target"
+        );
+
+        element.style.opacity = ".4";
+
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE MENU
+   ========================================================= */
+
+const menuButton =
+    document.getElementById(
+        "menuButton"
+    );
+
+const navLinks =
+    document.getElementById(
+        "navLinks"
+    );
+
+
+menuButton.addEventListener(
+    "click",
+    () => {
+
+        navLinks.classList.toggle(
+            "open"
+        );
+
+    }
+);
+
+
+document
+.querySelectorAll(
+    ".nav-links a"
+)
+.forEach(link => {
+
+    link.addEventListener(
+        "click",
+        () => {
+
+            navLinks.classList.remove(
+                "open"
+            );
+
+        }
+    );
+
+});
+
+
+/* =========================================================
+   ADMIN
+   ========================================================= */
+
+const adminModal =
+    document.getElementById(
+        "adminModal"
+    );
+
+
+/*
+   Temporary development access.
+
+   Username: admin
+   Password: change-me
+
+   Replace with real authentication
+   before going live.
+*/
+
+function openAdmin() {
+
+    adminModal.classList.add(
+        "active"
+    );
+
+}
+
+
+document.addEventListener(
+    "keydown",
+    event => {
+
+        /*
+           Hidden admin shortcut:
+           Ctrl + Shift + A
+        */
+
+        if (
+            event.ctrlKey &&
+            event.shiftKey &&
+            event.key.toLowerCase() === "a"
+        ) {
+
+            openAdmin();
+
+        }
+
+    }
+);
+
+
+document
+.getElementById("closeAdmin")
+.addEventListener(
+    "click",
+    () => {
+
+        adminModal.classList.remove(
+            "active"
+        );
+
+    }
+);
+
+
+adminModal.addEventListener(
+    "click",
+    event => {
+
+        if (
+            event.target ===
+            adminModal
+        ) {
+
+            adminModal.classList.remove(
+                "active"
+            );
+
+        }
+
+    }
+);
+
+
+/* =========================================================
+   LOGIN
+   ========================================================= */
+
+document
+.getElementById("loginForm")
+.addEventListener(
+    "submit",
+    event => {
+
+        event.preventDefault();
+
+
+        const username =
+            document.getElementById(
+                "adminUsername"
+            ).value;
+
+
+        const password =
+            document.getElementById(
+                "adminPassword"
+            ).value;
+
+
+        if (
+            username === "admin" &&
+            password === "change-me"
+        ) {
+
+            document
+            .getElementById(
+                "loginView"
+            )
+            .style.display = "none";
+
+
+            document
+            .getElementById(
+                "dashboard"
+            )
+            .classList.add(
+                "active"
+            );
+
+
+            loadAdmin();
+
+        } else {
+
+            showToast(
+                "Incorrect login details."
+            );
+
+        }
+
+    }
+);
+
+
+/* =========================================================
+   LOAD ADMIN
+   ========================================================= */
+
+function loadAdmin() {
+
+    const s =
+        getSettings();
+
+
+    document.getElementById(
+        "adminVenue"
+    ).value =
+        s.venue;
+
+
+    document.getElementById(
+        "adminAddress"
+    ).value =
+        s.address;
+
+
+    document.getElementById(
+        "adminMaps"
+    ).value =
+        s.maps;
+
+
+    document.getElementById(
+        "adminEventName"
+    ).value =
+        s.eventName;
+
+
+    document.getElementById(
+        "adminEventDate"
+    ).value =
+        s.eventDate;
+
+
+    document.getElementById(
+        "adminEmail"
+    ).value =
+        s.email;
+
+
+    document.getElementById(
+        "adminPhone"
+    ).value =
+        s.phone;
+
+
+    document.getElementById(
+        "adminInstagram"
+    ).value =
+        s.instagram;
+
+
+    document.getElementById(
+        "adminFacebook"
+    ).value =
+        s.facebook;
+
+
+    document.getElementById(
+        "adminTikTok"
+    ).value =
+        s.tiktok;
+
+
+    document.getElementById(
+        "adminYoutube"
+    ).value =
+        s.youtube;
+
+}
+
+
+/* =========================================================
+   SAVE ADMIN
+   ========================================================= */
+
+document
+.getElementById("saveAdmin")
+.addEventListener(
+    "click",
+    () => {
+
+        const settings = {
+
+            venue:
+                document.getElementById(
+                    "adminVenue"
+                ).value,
+
+            address:
+                document.getElementById(
+                    "adminAddress"
+                ).value,
+
+            maps:
+                document.getElementById(
+                    "adminMaps"
+                ).value,
+
+            eventName:
+                document.getElementById(
+                    "adminEventName"
+                ).value,
+
+            eventDate:
+                document.getElementById(
+                    "adminEventDate"
+                ).value,
+
+            email:
+                document.getElementById(
+                    "adminEmail"
+                ).value,
+
+            phone:
+                document.getElementById(
+                    "adminPhone"
+                ).value,
+
+            instagram:
+                document.getElementById(
+                    "adminInstagram"
+                ).value,
+
+            facebook:
+                document.getElementById(
+                    "adminFacebook"
+                ).value,
+
+            tiktok:
+                document.getElementById(
+                    "adminTikTok"
+                ).value,
+
+            youtube:
+                document.getElementById(
+                    "adminYoutube"
+                ).value
+
+        };
+
+
+        saveSettings(
+            settings
+        );
+
+
+        updateWebsite();
+
+
+        showToast(
+            "Website information saved."
+        );
+
+    }
+);
+
+
+/* =========================================================
+   LOGOUT
+   ========================================================= */
+
+document
+.getElementById("logoutAdmin")
+.addEventListener(
+    "click",
+    () => {
+
+        document
+        .getElementById(
+            "dashboard"
+        )
+        .classList.remove(
+            "active"
+        );
+
+
+        document
+        .getElementById(
+            "loginView"
+        )
+        .style.display =
+            "block";
+
+
+        document
+        .getElementById(
+            "loginForm"
+        )
+        .reset();
+
+
+        showToast(
+            "Logged out."
+        );
+
+    }
+);
+
+
+/* =========================================================
+   REACH OUT FORM
+   ========================================================= */
+
+document
+.getElementById("reachForm")
+.addEventListener(
+    "submit",
+    event => {
+
+        event.preventDefault();
+
+
+        const settings =
+            getSettings();
+
+
+        if (!settings.email) {
+
+            showToast(
+                "Our email address will be added soon."
+            );
+
+            return;
+
+        }
+
+
+        const name =
+            document.getElementById(
+                "reachName"
+            ).value;
+
+
+        const email =
+            document.getElementById(
+                "reachEmail"
+            ).value;
+
+
+        const topic =
+            document.getElementById(
+                "reachTopic"
+            ).value;
+
+
+        const message =
+            document.getElementById(
+                "reachMessage"
+            ).value;
+
+
+        const subject =
+            encodeURIComponent(
+                "Hosanna Community Youth — Reach Out"
+            );
+
+
+        const body =
+            encodeURIComponent(
+
+`Name: ${name}
+
+Email: ${email}
+
+Topic: ${topic}
+
+Message:
+
+${message}`
+
+            );
+
+
+        window.location.href =
+            `mailto:${settings.email}?subject=${subject}&body=${body}`;
+
+    }
+);
+
+
+/* =========================================================
+   TOAST
+   ========================================================= */
+
+function showToast(message) {
+
+    const toast =
+        document.getElementById(
+            "toast"
+        );
+
+
+    toast.textContent =
+        message;
+
+
+    toast.classList.add(
+        "show"
+    );
+
+
+    setTimeout(
+        () => {
+
+            toast.classList.remove(
+                "show"
+            );
+
+        },
+        3000
+    );
+
+}
+
+
+/* =========================================================
+   YEAR
+   ========================================================= */
+
+document.getElementById(
+    "year"
+).textContent =
+    new Date().getFullYear();
+
+
+/* =========================================================
+   INITIALISE
+   ========================================================= */
+
+updateWebsite();
+
+</script>
+
+</body>
+</html>
